@@ -100,7 +100,9 @@ const buildHtml = (products) => `
 
 app.get("/products", async (req, res) => {
   try {
-    const response = await axios.get("https://www.adhominem.co/?format=json");
+    const response = await axios.get(
+      "https://www.adhominem.co/maincatalogue/?format=json"
+    );
 
     const items = response.data.items;
 
